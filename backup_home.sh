@@ -26,7 +26,7 @@ PROGRAMMING_DIR="$HOME/programming"
 HOME_FOLDERS=(
   "Desktop"
   "Documents"
-  "Downloads"
+  # "Downloads"
   "Music"
   "Pictures"
   "Videos"
@@ -55,7 +55,7 @@ DELETE_REMOVED=false
 # INTERNAL SETTINGS
 # =========================
 
-RSYNC_FLAGS=(-aH --info=progress2)
+RSYNC_FLAGS=(-a --no-links --info=progress2)
 
 if [ "$DRY_RUN" = true ]; then
   RSYNC_FLAGS+=(--dry-run)
